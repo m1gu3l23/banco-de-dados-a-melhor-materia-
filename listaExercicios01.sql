@@ -15,3 +15,4 @@ select curso, nome from matriculas right join alunos on aluno_id = alunos.id;
 select nome, curso from alunos inner join matriculas on alunos.id = aluno_id;
 select autores.nome, count(livros.id) a livros_total from autores left join livros on autores.id = livros.autor_id group by autores.nome order by livros-total desc limit 1;
 select produto, sum(receita) a receita_total from vendas group by produto order by receita_total asc limit 1;
+select nome, sum(20) a receita_total from autores left join livros on autores.id = autor_id group by nome;
