@@ -13,3 +13,4 @@ select nome, curso from alunos inner join matriculas where aluno_id = alunos.id;
 select nome, titulo from autores left join livros on autores.id = autor_id;
 select curso, nome from matriculas right join alunos on aluno_id = alunos.id;
 select nome, curso from alunos inner join matriculas on alunos.id = aluno_id;
+select autores.nome, count(livros.id) a livros_total from autores left join livros on autores.id = livros.autor_id group by autores.nome order by livros-total desc limit 1;
