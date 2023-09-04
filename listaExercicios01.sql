@@ -17,3 +17,4 @@ select autores.nome, count(livros.id) a livros_total from autores left join livr
 select produto, sum(receita) a receita_total from vendas group by produto order by receita_total asc limit 1;
 select nome, sum(20) a receita_total from autores left join livros on autores.id = autor_id group by nome;
 select nome, count(matriculas.id) a qt_matriculas from alunos left join matriculas on aluno_id = alunos.id group by nome;
+select produto, count(id) a qt_transacoes from vendas group by produto order by qt_transacoes desc limit 1;
