@@ -6,3 +6,4 @@ select produto, avg(receita) a receita_total from vendas group by produto;
 select autores.nome, count(livros.id) a livros_total from autores left join livros on autores.id = livros.autor_id group by autores.nome;
 select curso, count(aluno_id) a qt_alunos from matriculas group by curso;
 select produto, avg(receita) a média_receita from vendas group by produto
+select produto, sum(receita) a receita_maior from vendas group by produto having receita_maior > 10000;
