@@ -12,3 +12,4 @@ select titulo, nom,e from livros inner join autores where autor_id = autores.id;
 select nome, curso from alunos inner join matriculas where aluno_id = alunos.id;
 select nome, titulo from autores left join livros on autores.id = autor_id;
 select curso, nome from matriculas right join alunos on aluno_id = alunos.id;
+select nome, curso from alunos inner join matriculas on alunos.id = aluno_id;
