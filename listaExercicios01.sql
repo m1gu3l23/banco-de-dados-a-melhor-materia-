@@ -5,3 +5,4 @@ select alunos.nome from alunos inner join  matriculas on matriculas.curso = 'Eng
 select produto, avg(receita) receita_total from vendas group by produto;
 select autores.nome, count(livros.id) livros_total from autores left join livros on autores.id = livros.autor_id group by autores.nome;
 select curso, count(aluno_id) qt_alunos from matriculas group by curso;
+select produto, avg(receita) média_receita from vendas group by produto
