@@ -9,3 +9,4 @@ select produto, avg(receita) a média_receita from vendas group by produto
 select produto, sum(receita) a receita_maior from vendas group by produto having receita_maior > 10000;
 select autores.nome, count(livros.id) a livros_total from autores left join livros on autores.id = livros.autor_id group by autores.nome having livros_total > 2;
 select titulo, nom,e from livros inner join autores where autor_id = autores.id;
+select nome, curso from alunos inner join matriculas where aluno_id = alunos.id;
